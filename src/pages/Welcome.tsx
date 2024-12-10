@@ -1,13 +1,13 @@
 import { Button } from "@components/common/Button";
-import "./styles/Main.css";
+import "./styles/Welcome.css";
 
-export const Main = () => {
+export const Welcome = () => {
     return (
-        <main>
+        <div className="welcome-content">
             <section className="welcome-window">
                 <div className="primary-content">
                     <div>
-                        <h1>How much you know about Batman?</h1>
+                        <h1>How much you know about <span>Batman</span>?</h1>
                         <h4>Test your knowledge of the Dark Knight's universe with this quiz!</h4>
                     </div>
                     <div>
@@ -18,6 +18,6 @@ export const Main = () => {
                     <img src={"src/img/background.jpg"} alt="batman image" />
                 </div>
             </section>
-        </main>
+        </div>
     );
 }

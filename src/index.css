@@ -8,6 +8,7 @@
     --primary: #182133;
     --secondary: #f1f1f1;
     --tertiary: #293652;
+    --quaternary: #ffc400;
 }
 
 * {
@@ -24,4 +25,15 @@ body {
     height: 100vh;
     font-family: Jersey;
     background-color: var(--primary);
+}
+
+main {
+    background-color: var(--primary);
+    height: calc(100% - 70px);
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

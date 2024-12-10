@@ -1,12 +1,12 @@
 header {
-    background-color: var(--tertiary);
+    background-color: var(--primary);
     color: var(--secondary);
     height: 70px;
     display: flex;
     align-items: center;
 
     h3 {
-        font-size: 32px;
+        font-size: 28px;
         margin-left: 25px;
     }
 }

@@ -1,0 +1,14 @@
+footer {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    text-align: end;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    a {
+        text-decoration: none;
+        margin-right: 10px;
+    }
+}

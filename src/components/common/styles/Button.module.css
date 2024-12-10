@@ -1,0 +1,14 @@
+
+.button {
+    background-color: var(--tertiary);
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--tertiary), white 15%);
+    }
+}
+

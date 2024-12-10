@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Jersey;
+    src: url("src/font/Jersey20-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+:root {
+    --primary: #182133;
+    --secondary: #f1f1f1;
+    --tertiary: #293652;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+    font-family: Jersey;
+    background-color: var(--primary);
+}

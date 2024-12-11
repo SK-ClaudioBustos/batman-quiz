@@ -1,10 +1,12 @@
 @font-face {
-    font-family: Jersey;
-    src: url("src/font/Jersey20-Regular.ttf") format("truetype");
+    font-family: Kanit;
+    src: url("src/font/Kanit-Regular.ttf") format("truetype");
     font-weight: 400;
+    font-display: swap;
 }
 
 :root {
+    --font-family: Kanit;
     --primary: #182133;
     --secondary: #f1f1f1;
     --tertiary: #293652;
@@ -23,13 +25,17 @@
 
 body {
     height: 100vh;
-    font-family: Jersey;
+    font-family: var(--font-family), Inter;
     background-color: var(--primary);
 }
 
 main {
     background-color: var(--primary);
     height: calc(100% - 70px);
+}
+
+button {
+    font-family: var(--font-family);
 }
 
 .container-center {

@@ -1,4 +1,5 @@
 import { Button } from "@components/common/Button";
+import { ImageBackground } from "@components/ImageBackground";
 import "./styles/Welcome.css";
 
 interface Props {
@@ -18,9 +19,7 @@ export const Welcome = ({ handleStartQuiz }: Props) => {
                         <Button onClick={handleStartQuiz}>Start Quiz</Button>
                     </div>
                 </div>
-                <div className="img-background">
-                    <img src={"src/img/background.jpg"} alt="batman image" />
-                </div>
+                <ImageBackground />
             </section>
         </div>
     );

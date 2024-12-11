@@ -4,7 +4,7 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@pages": ["src/pages"],
-      "@img/*": ["src/img/*"],
+      "@data/*": ["src/data/*"],
     },
     "moduleResolution": "node",
     "jsx": "react-jsx",

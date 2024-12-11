@@ -1,6 +1,5 @@
-import { Welcome } from "@pages";
+import { QuizSection, Welcome } from "@pages";
 import { useState } from "react";
-import { QuizSection } from "@pages";
 import { Header } from "./Header";
 
 export const Layout = () => {
@@ -10,13 +9,18 @@ export const Layout = () => {
     const handleStartQuiz = () => {
         setStartQuiz(!startQuiz);
     }
+
+    const handleSetScore = (score: number) => {
+        setScore(score);
+    }
+
     return (
         <>
             <Header score={score} startQuiz={startQuiz} />
             <main>
                 {
                     startQuiz
-                        ? <QuizSection handleStartQuiz={handleStartQuiz} />
+                        ? <QuizSection score={score} handleSetScore={handleSetScore} />
                         : <Welcome handleStartQuiz={handleStartQuiz} />
                 }
             </main>

@@ -1,0 +1,26 @@
+.option {
+    cursor: pointer;
+    border: 1px solid var(--secondary);
+    background-color: var(--tertiary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    
+    &:hover {
+        background-color: color-mix(in srgb, var(--tertiary), #000 15%);
+    }
+    
+}
+
+.option.selected {
+    background-color: var(--quaternary);
+}
+
+.option.disabled {
+    user-select: none;
+    cursor: auto;
+    opacity: 40%;
+}

@@ -1,7 +1,11 @@
 import { Button } from "@components/common/Button";
 import "./styles/Welcome.css";
 
-export const Welcome = () => {
+interface Props {
+    handleStartQuiz: () => void
+}
+
+export const Welcome = ({ handleStartQuiz }: Props) => {
     return (
         <div className="welcome-content">
             <section className="welcome-window">
@@ -11,7 +15,7 @@ export const Welcome = () => {
                         <h4>Test your knowledge of the Dark Knight's universe with this quiz!</h4>
                     </div>
                     <div>
-                        <Button>Start Quiz</Button>
+                        <Button onClick={handleStartQuiz}>Start Quiz</Button>
                     </div>
                 </div>
                 <div className="img-background">

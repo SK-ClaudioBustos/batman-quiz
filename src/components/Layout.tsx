@@ -1,12 +1,24 @@
-import { ReactNode } from "react";
+import { Welcome } from "@pages";
+import { useState } from "react";
+import { QuizSection } from "@pages";
 import { Header } from "./Header";
 
-export const Layout = ({ children }: { children?: ReactNode }) => {
+export const Layout = () => {
+    const [startQuiz, setStartQuiz] = useState(false);
+    const [score, setScore] = useState(0);
+
+    const handleStartQuiz = () => {
+        setStartQuiz(!startQuiz);
+    }
     return (
         <>
-            <Header />
+            <Header score={score} startQuiz={startQuiz} />
             <main>
-                {children}
+                {
+                    startQuiz
+                        ? <QuizSection handleStartQuiz={handleStartQuiz} />
+                        : <Welcome handleStartQuiz={handleStartQuiz} />
+                }
             </main>
         </>
     );

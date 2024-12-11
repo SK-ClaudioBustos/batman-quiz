@@ -1,3 +1,4 @@
-export * from "./NotFound";
+export * from "./QuizSection";
 export * from "./Welcome";
+
 

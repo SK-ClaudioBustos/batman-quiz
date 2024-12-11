@@ -1,11 +1,8 @@
 import { Layout } from "@components/Layout";
-import { ReactNode } from "react";
 
-function App({ children }: { children: ReactNode }) {
+function App() {
   return (
-    <Layout>
-      {children}
-    </Layout>
+    <Layout />
   )
 }
 

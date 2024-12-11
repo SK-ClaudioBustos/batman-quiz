@@ -4,9 +4,24 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
+    padding: 15px;
+    justify-content: space-between;
 
     h3 {
         font-size: 28px;
-        margin-left: 25px;
+    }
+
+    .score {
+        padding: 20px;
+        height: 30px;
+        border: 1px solid var(--secondary);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-size: 1.5rem;
+        }
     }
 }

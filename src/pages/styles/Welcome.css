@@ -18,20 +18,20 @@
             &>:first-child {
 
                 h1,
-                h4 {
+                h2 {
                     color: var(--secondary);
                 }
 
                 h1 {
-                    font-size: 64px;
+                    font-size: 4rem;
 
                     span {
                         color: var(--quaternary);
                     }
                 }
 
-                h4 {
-                    font-size: 22px;
+                h2 {
+                    font-size: 2rem;
                 }
             }
 

@@ -17,7 +17,7 @@ export const Welcome = ({ handleStartQuiz }: Props) => {
                         <span>How much you know about <span>Batman</span>?</span>
                         <span>Test your knowledge of the Dark Knight's universe with this quiz!</span>
                     </div>
-                    <div className="container-center">
+                    <div>
                         <PixelArt colors={JOKER_COLORS} id="joker" rotateGrads="-5deg" translateX="-10px" translateY="22px" pixelArt={JOKER_ART} />
                         <PixelArt colors={BATMAN_COLORS} id="batman" rotateGrads="5deg" translateX="22px" translateY="-10px" pixelArt={BATMAN_ART} />
                     </div>

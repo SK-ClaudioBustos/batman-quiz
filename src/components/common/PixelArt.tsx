@@ -30,12 +30,14 @@ export const PixelArt = ({ id, translateX, translateY, colors, rotateGrads, pixe
         generatePixelArt();
     }, []);
     return (
-        <div
-            id={id}
-            className={style["frame"]}
-            style={{ "--rotate": rotateGrads, "--tX": translateX, "--tY": translateY, margin: "0 auto" } as React.CSSProperties}
-        >
-            <div className={style["pixel"]}></div>
+        <div className={style["frame-container"]}>
+            <div
+                id={id}
+                className={style["frame"]}
+                style={{ "--rotate": rotateGrads, "--tX": translateX, "--tY": translateY, margin: "0 auto" } as React.CSSProperties}
+            >
+                <div className={style["pixel"]}></div>
+            </div>
         </div>
     );
 }

@@ -16,7 +16,7 @@
         }
 
         .question {
-            width: 50%;
+            width: 845px;
             background-color: var(--tertiary);
             border-radius: 5px;
             min-height: 300px;
@@ -27,7 +27,7 @@
     }
 
     .container-options {
-        width: 50%;
+        width: 845px;
 
         .options {
             margin: 20px 0;
@@ -36,12 +36,24 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             gap: 2rem;
-
         }
     }
 
     .buttons {
         display: flex;
         gap: 2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .quiz .container-question .question,
+    .quiz .container-options {
+        width: 90%;
+    }
+
+    .quiz .container-options .options {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 }

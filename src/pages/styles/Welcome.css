@@ -16,22 +16,24 @@
             padding: 80px 30px 40px;
 
             &>:first-child {
+                display: flex;
+                flex-direction: column;
 
-                h1,
-                h2 {
+
+                span {
                     color: var(--secondary);
                 }
 
-                h1 {
-                    font-size: 3rem;
+                &>:first-child {
+                    font-size: 48px;
 
                     span {
                         color: var(--quaternary);
                     }
                 }
 
-                h2 {
-                    font-size: 1rem;
+                &>:last-child {
+                    font-size: 24px;
                 }
             }
 

@@ -8,7 +8,7 @@ header {
     justify-content: space-between;
 
     h3 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .score {
@@ -21,7 +21,7 @@ header {
         justify-content: center;
 
         span {
-            font-size: 1.5rem;
+            font-size: 24px;
         }
     }
 }

@@ -34,7 +34,7 @@ export const QuizSection = ({ score, handleSetScore }: Props) => {
     }
 
     const handlePassToNextQuestion = () => {
-        if (actualQuestion === 25) {
+        if (actualQuestion === 50) {
             // TODO finish quiz
         } else {
             setQuestion(actualQuestion + 1);
@@ -46,7 +46,7 @@ export const QuizSection = ({ score, handleSetScore }: Props) => {
     return (
         <section className="quiz">
             <div className="container-question">
-                <p className="actual-quiz">{`${actualQuestion + 1}/25`}</p>
+                <p className="actual-quiz">{`${actualQuestion + 1}/50`}</p>
                 <div className="question">
                     <p>
                         {
@@ -75,7 +75,12 @@ export const QuizSection = ({ score, handleSetScore }: Props) => {
             </div>
             <div className="buttons">
                 <Button width="150px" onClick={handleResetQuiz}>Reset Quiz</Button>
-                <Button width="150px" onClick={passQuestion ? handlePassToNextQuestion : handleCheckOption}>{passQuestion ? "Next Question" : "Check Option"}</Button>
+                <Button
+                    width="150px"
+                    onClick={passQuestion ? handlePassToNextQuestion : handleCheckOption}
+                >
+                    {passQuestion ? "Next Question" : "Check Option"}
+                </Button>
             </div>
         </section>
     );

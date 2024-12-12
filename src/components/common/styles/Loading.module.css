@@ -1,0 +1,30 @@
+.container-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--secondary);
+}
+
+.progress-bar {
+    background: #c1c1c110;
+    width: 150px;
+    height: 10px;
+}
+
+.progress {
+    background-color: var(--secondary);
+    width: 1%;
+    height: inherit;
+    animation: progress-indeterminate 1s linear both;
+}
+
+@keyframes progress-indeterminate {
+    0% {
+        width: 10%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

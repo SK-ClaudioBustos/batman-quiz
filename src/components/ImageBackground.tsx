@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Loading } from "./common/Loading";
 import "./styles/ImageBackground.css";
 
 export const ImageBackground = () => {
@@ -10,13 +11,9 @@ export const ImageBackground = () => {
 
     return (
         <div className="img-background">
-            {isLoading && (
-                <div className="container-center">
-                    <h1>LOADING</h1>
-                </div>
-            )}
+            {isLoading && <Loading />}
             <img
-                src={"src/img/background.jpg"}
+                src={"src/img/background.avif"}
                 alt="batman image"
                 onLoad={handleImageLoad}
                 style={{ display: isLoading ? "none" : "block" }}

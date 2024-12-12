@@ -8,19 +8,39 @@
     height: 60px;
     display: flex;
     justify-content: space-between;
-    
+
     &:hover {
         background-color: color-mix(in srgb, var(--tertiary), #000 15%);
     }
-    
+
 }
 
 .option.selected {
-    background-color: var(--quaternary);
+    background: linear-gradient(to bottom, var(--quaternary), color-mix(in srgb, var(--quaternary), #000 25%), var(--quaternary));
+    box-shadow: 0px 0px 10px 1px var(--quaternary);
+    animation: shine 3s linear infinite;
 }
 
 .option.disabled {
     user-select: none;
     cursor: auto;
     opacity: 40%;
+}
+
+.correct-option {
+    color: #0f0;
+}
+
+.incorrect-option {
+    color: #f00;
+}
+
+@keyframes shine {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 60px;
+    }
 }

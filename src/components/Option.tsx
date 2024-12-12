@@ -26,8 +26,8 @@ export const Option = ({ label, value, correctOption, optionSelected, passQuesti
                     <span>
                         {
                             (value === correctOption)
-                                ? <>Correct</>
-                                : <>Incorrect</>
+                                ? <span className="correct-option">Correct</span>
+                                : <span className="incorrect-option">Incorrect</span>
                         }
                     </span>
                 )

@@ -29,7 +29,7 @@ export const QuizSection = ({ score, handleSetScore }: Props) => {
         handleSetScore(0);
         setPassQuestion(false);
         setOptionSelected(null);
-        setQuestion(1);
+        setQuestion(0);
 
     }
 

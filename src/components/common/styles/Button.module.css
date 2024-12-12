@@ -10,7 +10,9 @@
     &:hover {
         transition: .5s all ease;
         --variant: color-mix(in srgb, var(--tertiary), white 15%);
+        --variant: var(--quaternary);
         background-color: var(--variant);
+        box-shadow: 0 0 10px 5px color-mix(in srgb, var(--variant), #000 25%);
         transform: scale(1.2);
     }
 }

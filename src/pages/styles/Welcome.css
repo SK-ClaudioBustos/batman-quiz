@@ -19,13 +19,14 @@
                 display: flex;
                 flex-direction: column;
                 text-align: center;
+                margin-bottom: 15px;
 
                 span {
                     color: var(--secondary);
                 }
 
                 &>:first-child {
-                    font-size: 48px;
+                    font-size: 35px;
 
                     span {
                         color: var(--quaternary);
@@ -33,7 +34,7 @@
                 }
 
                 &>:last-child {
-                    font-size: 24px;
+                    font-size: 20px;
                 }
             }
 

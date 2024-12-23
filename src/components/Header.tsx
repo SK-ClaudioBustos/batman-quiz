@@ -1,6 +1,10 @@
+import { useQuizStorage } from "@src/store/quiz.store";
 import "./styles/Header.css";
 
-export const Header = ({ startQuiz, score = 0 }: { startQuiz: boolean, score: number }) => {
+export const Header = () => {
+    const startQuiz = useQuizStorage((state) => state.showQuiz);
+    const score = useQuizStorage((state) => state.score);
+
     return (
         <header>
             <h3>

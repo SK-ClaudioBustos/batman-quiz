@@ -1,27 +1,23 @@
-import { QuizSection, Welcome } from "@pages";
-import { useState } from "react";
+import { Welcome } from "@pages";
+import { lazy, Suspense } from "react";
 import { Header } from "./Header";
+import { useQuizStorage } from "@src/store/quiz.store";
+const QuizSection = lazy(() => import('@src/pages/QuizSection'));
 
 export const Layout = () => {
-    const [startQuiz, setStartQuiz] = useState(false);
-    const [score, setScore] = useState(0);
-
-    const handleStartQuiz = () => {
-        setStartQuiz(!startQuiz);
-    }
-
-    const handleSetScore = (score: number) => {
-        setScore(score);
-    }
-
+    const startQuiz = useQuizStorage((state) => state.showQuiz);
     return (
         <>
-            <Header score={score} startQuiz={startQuiz} />
+            <Header />
             <main>
                 {
                     startQuiz
-                        ? <QuizSection score={score} handleSetScore={handleSetScore} />
-                        : <Welcome handleStartQuiz={handleStartQuiz} />
+                        ? (
+                            <Suspense fallback={<>CARGANDO</>}>
+                                <QuizSection />
+                            </Suspense>
+                        )
+                        : <Welcome />
                 }
             </main>
         </>

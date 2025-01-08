@@ -1,0 +1,36 @@
+.score-container {
+    height: 100%;
+    background: var(--dark-gradient-bg);
+
+    & .score-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        & .score-box {
+            padding: 10px;
+            border-radius: 5px;
+            /* background-color: var(--tertiary); */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            text-align: center;
+
+            & h1 {
+                color: var(--quaternary);
+                font-size: 2rem;
+            }
+
+            & p {
+                color: var(--secondary);
+                font-size: 1rem;
+            }
+        }
+
+        & >:last-child {
+            align-self: center;
+        }
+    }
+}

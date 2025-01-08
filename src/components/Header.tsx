@@ -1,8 +1,8 @@
-import { useQuizStorage } from "@src/store/quiz.store";
+import { Seccion, useQuizStorage } from "@src/store/quiz.store";
 import "./styles/Header.css";
 
 export const Header = () => {
-    const startQuiz = useQuizStorage((state) => state.showQuiz);
+    const section = useQuizStorage((state) => state.section);
     const score = useQuizStorage((state) => state.score);
 
     return (
@@ -11,7 +11,7 @@ export const Header = () => {
                 Batman Quiz
             </h3>
             {
-                startQuiz && (
+                section === Seccion.QUIZ && (
                     <div className="score">
                         <span>
                             {`Score ${score}`}

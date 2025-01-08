@@ -146,7 +146,7 @@ export const questions: QuestionData[] = [
         "correct_option": 1
     },
     {
-        "question": "What is the name of the Batcomputer's AI assistant?",
+        "question": "Who provides tactical and technical support to Batman as Oracle?",
         "options": ["Oracle", "Alfred", "Lucius", "Bat-AI"],
         "correct_option": 0
     },
@@ -229,5 +229,31 @@ export const questions: QuestionData[] = [
         "question": "What does Batman use as his emblem?",
         "options": ["A bat", "A crow", "A wolf", "A dragon"],
         "correct_option": 0
+    },
+    {
+        "question": "What is the name of the device Batman uses to glide from high places?",
+        "options": ["Bat-Glider", "Bat-Wings", "Cape", "Grapnel Gun"],
+        "correct_option": 2
+    },
+    {
+        "question": "What is the Joker's signature weapon?",
+        "options": ["Laughing gas", "Explosives", "Poisoned cards", "Acid flower"],
+        "correct_option": 0
+    },
+    {
+        "question": "Which villain is known for his icy demeanor?",
+        "options": ["Mr. Freeze", "Penguin", "Scarecrow", "Riddler"],
+        "correct_option": 0
+    },
+    {
+        "question": "What is the alias of Barbara Gordon when she fights alongside Batman?",
+        "options": ["Catwoman", "Batgirl", "Huntress", "Black Canary"],
+        "correct_option": 1
+    },
+    {
+        "question": "Who is the vigilante known for using a bow and arrow in Gotham?",
+        "options": ["Green Arrow", "Huntress", "Red Hood", "Robin"],
+        "correct_option": 1
     }
+    
 ];

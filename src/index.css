@@ -12,6 +12,7 @@
     --secondary: #b8cbda;
     --tertiary: #3b424b;
     --quaternary: #ffc400;
+    --dark-gradient-bg: linear-gradient(color-mix(in srgb, var(--primary), #fff 5%), var(--primary), color-mix(in srgb, var(--primary), #000 5%)); 
 }
 
 * {

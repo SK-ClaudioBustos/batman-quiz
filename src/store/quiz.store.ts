@@ -1,22 +1,28 @@
-import { create, StateCreator } from 'zustand'
+import { create, StateCreator } from 'zustand';
+
+export enum Seccion {
+  WELCOME = "Welcome",
+  QUIZ = "Quiz",
+  SCORE = "Score"
+}
 
 interface QuizStorageState {
   score: number
-  showQuiz: boolean
+  section: Seccion
 }
 
 interface Actions {
   setScore: (newScore: number) => void
-  setShowQuiz: (showQuiz: boolean) => void
+  setSection: (string: Seccion) => void
 }
 
 type QuizData = QuizStorageState & Actions;
 
 const quizApi: StateCreator<QuizData> = (set) => ({
   score: 0,
-  showQuiz: false,
+  section: Seccion.WELCOME,
   setScore: (newScore) => { set(() => ({ score: newScore })) },
-  setShowQuiz: (showQuiz) => { set(() => ({ showQuiz })) }
+  setSection: (actualSection) => { set(() => ({ section: actualSection })) }
 });
 
 export const useQuizStorage = create<QuizData>()(quizApi);

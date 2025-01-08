@@ -1,17 +1,19 @@
 import { Option } from "@components/Option";
 import { Button } from "@components/common/Button";
 import { questions } from "@data/questions";
-import { useQuizStorage } from "@src/store/quiz.store";
+import { Seccion, useQuizStorage } from "@src/store/quiz.store";
 import { useState } from "react";
 import "./styles/QuizSection.css";
 
 export default function QuizSection() {
     const score = useQuizStorage((state) => state.score);
     const setScore = useQuizStorage((state) => state.setScore);
+    const setSection = useQuizStorage((state) => state.setSection);
+
     const [optionSelected, setOptionSelected] = useState<number | null>(null);
     const [actualQuestion, setQuestion] = useState(0);
     const [passQuestion, setPassQuestion] = useState(false);
-    const correctOption = questions[actualQuestion].correct_option;
+    const correctOption = actualQuestion !== 50 ? questions[actualQuestion].correct_option : 0;
 
     const handleSelectedOption = (optionSelected: number) => {
         setOptionSelected(optionSelected);
@@ -28,14 +30,14 @@ export default function QuizSection() {
         setPassQuestion(false);
         setOptionSelected(null);
         setQuestion(0);
-
     }
 
     const handlePassToNextQuestion = () => {
-        if (actualQuestion === 50) {
-            // TODO finish quiz
+        if (actualQuestion === 49) {
+            setSection(Seccion.SCORE);
         } else {
-            setQuestion(actualQuestion + 1);
+            const nextQuestion = actualQuestion + 1;
+            setQuestion(nextQuestion);
             setPassQuestion(false);
             setOptionSelected(null);
         }
@@ -79,7 +81,8 @@ export default function QuizSection() {
                         width="150px"
                         onClick={passQuestion ? handlePassToNextQuestion : handleCheckOption}
                     >
-                        {passQuestion ? "Next Question" : "Check Option"}
+                        {actualQuestion !== 50 && passQuestion ? "Next Question" : "Check Option"}
+                        {actualQuestion === 50 && "Finish Quiz"}
                     </Button>
                 </div>
             </div>

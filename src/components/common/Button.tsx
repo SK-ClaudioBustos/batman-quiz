@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import style from "./styles/Button.module.css";
 
 type Color = `#${string}`;
@@ -6,20 +6,19 @@ type Color = `#${string}`;
 interface Params {
     children: ReactNode;
     disabled?: boolean;
-    width?: string;
     color?: Color;
     onClick?: () => void;
 }
 
-export const Button = ({ children, disabled = false, width = "fit-content", color = "#f1f1f1", onClick }: Params) => {
+export const Button = ({ children, disabled = false, color = "#f1f1f1", onClick }: Params) => {
     return (
         <>
             {
                 disabled
-                    ? (<button disabled type="button" style={{ color, width }} className={style["button"]} onClick={onClick ?? undefined}>
+                    ? (<button disabled type="button" style={{ "--c": color } as CSSProperties} className={style["button"]} onClick={onClick ?? undefined}>
                         {children}
                     </button>)
-                    : (<button type="button" style={{ color, width }} className={style["button"]} onClick={onClick ?? undefined}>
+                    : (<button type="button" style={{ "--c": color } as CSSProperties} className={style["button"]} onClick={onClick ?? undefined}>
                         {children}
                     </button>)
             }

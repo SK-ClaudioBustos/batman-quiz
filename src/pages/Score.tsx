@@ -19,7 +19,7 @@ export default function Score() {
                     <h1>{`Your Final Score is ${score}`}</h1>
                     <p>{`${getQuizLegend(score)}`}</p>
                 </div>
-                <Button width="150px" onClick={handleResetQuiz}>Reset Quiz</Button>
+                <Button onClick={handleResetQuiz}>Reset Quiz</Button>
             </div>
         </section>
     );

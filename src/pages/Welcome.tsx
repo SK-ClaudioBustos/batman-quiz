@@ -21,7 +21,7 @@ export const Welcome = () => {
                         <PixelArt colors={BATMAN_COLORS} id="batman" rotateGrads="5deg" translateX="22px" translateY="-10px" pixelArt={BATMAN_ART} />
                     </div>
                     <div>
-                        <Button width="150px" onClick={() => setSection(Seccion.QUIZ)}>Start Quiz</Button>
+                        <Button onClick={() => setSection(Seccion.QUIZ)}>Start Quiz</Button>
                     </div>
                 </div>
             </section>

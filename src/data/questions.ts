@@ -1,4 +1,4 @@
-type QuestionData = {
+export type QuestionData = {
     question: string,
     options: string[],
     correct_option: number

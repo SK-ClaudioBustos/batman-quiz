@@ -8,8 +8,14 @@ header {
     justify-content: space-between;
     font-size: 13px;
 
-    & h3 {
-        color: var(--quaternary);
+    & .header-logo {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        & h3 {
+            color: var(--quaternary);
+        }
     }
 
     & .score {

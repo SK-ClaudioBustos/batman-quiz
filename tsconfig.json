@@ -6,6 +6,7 @@
       "@components/*": ["src/components/*"],
       "@pages": ["src/pages"],
       "@data/*": ["src/data/*"],
+      "@icons/*": ["src/icons/*"],
     },
     "moduleResolution": "node",
     "jsx": "react-jsx",

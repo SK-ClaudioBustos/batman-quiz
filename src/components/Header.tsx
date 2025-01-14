@@ -1,4 +1,5 @@
 import { Seccion, useQuizStorage } from "@src/store/quiz.store";
+import BatmanLogo from "@icons/batman_logo.svg?react";
 import "./styles/Header.css";
 
 export const Header = () => {
@@ -7,9 +8,13 @@ export const Header = () => {
 
     return (
         <header>
-            <h3>
-                Batman Quiz
-            </h3>
+            <div className="header-logo">
+                <h3>
+                    Batman Quiz
+                </h3>
+                <BatmanLogo width={30} height={20}/>
+            </div>
+
             {
                 section === Seccion.QUIZ && (
                     <div className="score">

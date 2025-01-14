@@ -5,7 +5,7 @@
         display: flex;
         flex-direction: row;
         height: 100%;
-        background: linear-gradient(color-mix(in srgb, var(--primary), #fff 5%), color-mix(in srgb, var(--primary), #fff 5%), var(--primary));
+        /* background: linear-gradient(color-mix(in srgb, var(--primary), #fff 5%), color-mix(in srgb, var(--primary), #fff 5%), var(--primary)); */
 
         .primary-content {
             width: 100%;

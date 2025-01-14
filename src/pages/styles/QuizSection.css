@@ -67,14 +67,5 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
-    .quiz div .buttons {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 1.5rem;
-
-        & > * {
-            width: 80%;
-            font-size: 1.5rem;
-        }
-    }
+    
 }

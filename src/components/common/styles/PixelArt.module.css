@@ -16,5 +16,11 @@
     width: 17px;
     box-shadow: var(--shadow);
     transform: rotate(var(--rotate)) translate(var(--tX), var(--tY));
-    filter: drop-shadow(2px 2px 10px rgb(219 209 209 / 55% ));
+    filter: drop-shadow(2px 2px 10px rgb(219 209 209 / 55%));
+}
+
+@media (width < 768px) {
+    .frame {
+        transform: scale(0.5);
+    }
 }

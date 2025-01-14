@@ -7,7 +7,7 @@ import { Seccion, useQuizStorage } from "@src/store/quiz.store";
 
 export const Welcome = () => {
     const setSection = useQuizStorage((state) => state.setSection);
-    
+
     return (
         <section className="welcome-content">
             <section className="welcome-window">

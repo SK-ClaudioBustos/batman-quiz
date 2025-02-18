@@ -1,6 +1,7 @@
 import { Seccion, useQuizStorage } from "@src/store/quiz.store";
 import { Dispatch, SetStateAction } from "react";
 import { Button } from "./common/Button";
+import { useNavigate } from "react-router";
 
 interface Props {
     actualQuestionIndex: number;
@@ -15,8 +16,7 @@ interface Props {
 export const QuizButtons = ({ actualQuestionIndex, optionSelected, correctOption, passQuestion, setPassQuestion, setActualQuestion, setOptionSelected }: Props) => {
     const score = useQuizStorage((state) => state.score);
     const setScore = useQuizStorage((state) => state.setScore);
-    const setSection = useQuizStorage((state) => state.setSection);
-
+    const navigate = useNavigate();
 
     const handleCheckOption = () => {
         const actualScore = (optionSelected === correctOption) ? score + 1 : score - 1;
@@ -33,7 +33,7 @@ export const QuizButtons = ({ actualQuestionIndex, optionSelected, correctOption
 
     const handlePassToNextQuestion = () => {
         if (actualQuestionIndex === 49) {
-            setSection(Seccion.SCORE);
+            navigate("/score");
         } else {
             const nextQuestion = actualQuestionIndex + 1;
             setActualQuestion(nextQuestion);

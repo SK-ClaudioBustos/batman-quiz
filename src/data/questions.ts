@@ -51,7 +51,7 @@ export const questions: QuestionData[] = [
         "correct_option": 1
     },
     {
-        "question": "What does Batman use to summon his allies?",
+        "question": "What does Commissioner Gordon use to call Batman when he needs his help?",
         "options": ["Bat-Radio", "Bat-Signal", "Bat-Phone", "Bat-Laser"],
         "correct_option": 1
     },
@@ -146,8 +146,8 @@ export const questions: QuestionData[] = [
         "correct_option": 1
     },
     {
-        "question": "Who provides tactical and technical support to Batman as Oracle?",
-        "options": ["Oracle", "Alfred", "Lucius", "Bat-AI"],
+        "question": "Who provides tactical and technical support to Batman after becoming paralyzed?",
+        "options": ["Barbara Gordon", "Alfred Pennyworth", "Lucius Fox", "Tim Drake"],
         "correct_option": 0
     },
     {

@@ -1,19 +1,16 @@
 import { QuestionData } from "@src/data/questions";
 import { Option } from "./Option";
-import { Dispatch, SetStateAction } from "react";
 
 interface Props {
     actualQuestion: QuestionData;
     optionSelected: number | null;
     correctOption: number;
     passQuestion: boolean;
-    setOptionSelected: Dispatch<SetStateAction<number | null>>;
+    handleOptionSelected: (value: number) => void;
 }
 
-export const QuizOptionsBox = ({ actualQuestion, optionSelected, correctOption, passQuestion, setOptionSelected }: Props) => {
-    const handleSelectedOption = (optionSelected: number) => {
-        setOptionSelected(optionSelected);
-    }
+export const QuizOptionsBox = ({ actualQuestion, optionSelected, correctOption, passQuestion, handleOptionSelected }: Props) => {
+
     return (
         <div className="container-options">
             <span>Select a Option</span>
@@ -24,10 +21,10 @@ export const QuizOptionsBox = ({ actualQuestion, optionSelected, correctOption, 
                             key={index}
                             label={option}
                             value={index}
-                            correctOption={correctOption}
-                            optionSelected={optionSelected}
+                            isCorrectOption={correctOption === index}
                             passQuestion={passQuestion}
-                            onSelectedOption={handleSelectedOption}
+                            isOptionSelected={optionSelected === index}
+                            handleOptionSelected={handleOptionSelected}
                         />
                     ))
                 }

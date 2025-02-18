@@ -4,11 +4,15 @@ import { QuizOptionsBox } from "@src/components/QuizOptionsBox";
 import { useState } from "react";
 import "./styles/QuizSection.css";
 
-export default function QuizSection() {
+export default function Quiz() {
     const [actualQuestionIndex, setActualQuestionIndex] = useState(0);
     const [optionSelected, setOptionSelected] = useState<number | null>(null);
     const [passQuestion, setPassQuestion] = useState(false);
     const correctOption = actualQuestionIndex !== 50 ? questions[actualQuestionIndex].correct_option : 0;
+
+    const handleOptionSelected = (value: number) => {
+        if (!passQuestion) setOptionSelected(value);
+    }
 
     return (
         <section className="quiz">
@@ -24,11 +28,11 @@ export default function QuizSection() {
             </div>
             <div>
                 <QuizOptionsBox
+                    passQuestion={passQuestion}
                     actualQuestion={questions[actualQuestionIndex]}
                     correctOption={correctOption}
                     optionSelected={optionSelected}
-                    passQuestion={passQuestion}
-                    setOptionSelected={setOptionSelected}
+                    handleOptionSelected={handleOptionSelected}                    
                 />
                 <QuizButtons
                     actualQuestionIndex={actualQuestionIndex}

@@ -1,29 +1,28 @@
 import "./styles/Option.css";
 
 interface Props {
-    label: string
-    value: number
-    correctOption: number
-    optionSelected: number | null
-    passQuestion: boolean
-    onSelectedOption: (optionSelected: number) => void
+    label: string;
+    value: number;
+    isCorrectOption: boolean;
+    isOptionSelected: boolean;
+    passQuestion: boolean;
+    handleOptionSelected: (value: number) => void;
 }
 
-export const Option = ({ label, value, correctOption, optionSelected, passQuestion, onSelectedOption: onSelected }: Props) => {
-
-    const handleSelected = () => {
-        if (!passQuestion) onSelected(value);
-    }
-
+export const Option = ({ label, value, isCorrectOption, passQuestion, isOptionSelected, handleOptionSelected }: Props) => {
+    const handleOnSelect = () => handleOptionSelected(value);
+    const classes = `
+        option ${isOptionSelected ? "selected" : "no-selected"} 
+        ${passQuestion && !isOptionSelected && "disabled"}
+        ${passQuestion && isCorrectOption && isOptionSelected && "correct"}
+        ${passQuestion && !isCorrectOption && isOptionSelected && "incorrect"}
+    `;
     return (
         <li
-            onClick={handleSelected}
-            className={`option ${optionSelected === value ? "selected" : "no-selected"} ${(value !== correctOption && passQuestion) ? "disabled" : "enabled"}`}
+            onClick={handleOnSelect}
+            className={classes}
         >
             <span>{label}</span>
-            {
-                passQuestion && (value === correctOption) && <span className="correct-option">Correct option</span>
-            }
         </li>
     );
 }

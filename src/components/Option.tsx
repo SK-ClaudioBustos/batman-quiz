@@ -23,6 +23,15 @@ export const Option = ({ label, value, isCorrectOption, passQuestion, isOptionSe
             className={classes}
         >
             <span>{label}</span>
+            {
+                passQuestion && (
+                    <p>
+                        {
+                            isCorrectOption ? "Correct" : "Incorrect"
+                        }
+                    </p>
+                )
+            }
         </li>
     );
 }

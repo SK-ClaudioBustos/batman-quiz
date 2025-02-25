@@ -1,5 +1,5 @@
 import BatmanLogo from "@icons/batman_logo.svg?react";
-import { Seccion, useQuizStorage } from "@src/store/quiz.store";
+import { useQuizStorage } from "@src/store/quiz.store";
 import { useLocation } from "react-router";
 import "./styles/Header.css";
 

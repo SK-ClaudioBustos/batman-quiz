@@ -10,9 +10,8 @@
     --font-family: 'Kdam', Inter;
     --primary: #13121b;
     --secondary: #b8cbda;
-    --tertiary: #3b424b;
+    --tertiary: #2e2f31;
     --quaternary: #ffc400;
-    --dark-gradient-bg: linear-gradient(color-mix(in srgb, var(--primary), #fff 5%), var(--primary), color-mix(in srgb, var(--primary), #000 5%)); 
 }
 
 * {
@@ -28,11 +27,13 @@
 body {
     height: 100vh;
     font-family: var(--font-family);
-    background-color: var(--primary);
 }
 
 main {
-    background-color: var(--primary);
+    --bg-size: 10px;
+    background-size: 15px 30px;
+    background-image: linear-gradient(to bottom, color-mix(in srgb, var(--primary), #fff 5%) 3px, var(--primary) 1px);
+    box-shadow: inset 0px 0px 70px 10px #000;
     height: calc(100% - 70px);
 }
 

@@ -15,7 +15,7 @@
         --variant: var(--quaternary);
         background-color: var(--variant);
         box-shadow: 0 0 10px 5px color-mix(in srgb, var(--variant), #000 25%);
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     
     

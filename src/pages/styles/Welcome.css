@@ -5,7 +5,6 @@
         display: flex;
         flex-direction: row;
         height: 100%;
-        background: var(--dark-gradient-bg);
 
         .primary-content {
             width: 100%;
@@ -21,6 +20,8 @@
                 text-align: center;
                 margin-bottom: 15px;
                 z-index: 2;
+                text-shadow: 10px 10px 10px #000;
+
                 span {
                     color: var(--secondary);
                 }
@@ -55,17 +56,18 @@
     }
 }
 
-@media (width <= 1200px) {
+@media (width <=1200px) {
     .welcome-content .welcome-window .primary-content>:nth-child(2) {
         filter: opacity(0.3);
         justify-content: center;
-        & > :last-child {
+
+        &> :last-child {
             display: none;
         }
     }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     main .welcome-window .primary-content {
         width: 100%;
     }

@@ -1,5 +1,5 @@
 header {
-    background: linear-gradient(color-mix(in srgb, var(--primary), white 10%), var(--primary));
+    background: linear-gradient(color-mix(in srgb, var(--primary), white 15%), var(--primary));
     color: var(--secondary);
     height: 70px;
     display: flex;

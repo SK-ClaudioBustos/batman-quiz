@@ -2,7 +2,7 @@ import { questions } from "@data/questions";
 import { QuizButtons } from "@src/components/QuizButtons";
 import { QuizOptionsBox } from "@src/components/QuizOptionsBox";
 import { useState } from "react";
-import "./styles/QuizSection.css";
+import "./styles/Quiz.css";
 
 export default function Quiz() {
     const [actualQuestionIndex, setActualQuestionIndex] = useState(0);
